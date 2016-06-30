@@ -45,7 +45,7 @@ FOUNDATION_EXPORT double SohouerSDKVersionNumber;
 + (void) registerSDK:(NSString *)appkey appSecret:(NSString *)appSecret delegate:(__weak id<SOHTaskSDKRegiseterDelegate>)delegate;
 
 
-+ (void) login:(NSString *) platformUserId  delegate:(__weak id<SOHTaskSDKLoginDelegate>)delegate;
++ (void) login:(NSString *) platformUserId name:(NSString *)name delegate:(__weak id<SOHTaskSDKLoginDelegate>)delegate;
 
 /**
  *  是否登录成功
