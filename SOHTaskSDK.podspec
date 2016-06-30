@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
     s.source       = { :git => "https://github.com/bllny/SOHTaskSDK.git", :tag => s.version.to_s }
     s.vendored_frameworks = 'SohouerSDK.framework'
     s.resources    = 'SohouerSDK.bundle'
-    s.frameworks   = 'UIKit', 'Foundation', 'JavaScriptCore'
+    s.frameworks   = 'UIKit', 'Foundation', 'AdSupport','MobileCoreServices','JavaScriptCore'
 
     s.dependency 'AFNetworking'
     s.dependency 'YYModel'
