@@ -30,3 +30,4 @@
 #import "SOHCGUtilities.h"
 #import "UIView+SOHToast.h"
 #import "UIViewController+SOHUtils.h"
+#import "NSString+SOHUDID.h"
