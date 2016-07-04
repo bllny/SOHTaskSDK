@@ -10,13 +10,12 @@
 		AdSupport.framework
 		JavaScriptCore.framework
 		MobileCoreServices.framework
-		AFNetorking3.x 
-		YYModel
-		YYWebImage
-		YYText
-		YYWebImage
-		KVOController
-		Masonry
+		[AFNetorking3.x ](https://github.com/AFNetworking/AFNetworking)
+		[YYModel](https://github.com/ibireme/YYModel)
+		[YYText](https://github.com/ibireme/YYText)
+		[YYWebImage](https://github.com/ibireme/YYWebImage)
+		[KVOController](https://github.com/facebook/KVOController)
+		[Masonry](https://github.com/SnapKit/Masonry)
 ##调用步骤
 1. 选择Capabilities中的Background Modes中的Audio,AirPlay And Picture in Picture
 2. 初始化SDK,传入AppKey,AppSecret
