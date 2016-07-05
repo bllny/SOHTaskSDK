@@ -13,10 +13,16 @@ Pod::Spec.new do |s|
     s.frameworks   = 'UIKit','Security','Foundation', 'AdSupport','MobileCoreServices','JavaScriptCore'
 
     s.dependency 'AFNetworking'
-    s.dependency 'YYModel'
-    s.dependency 'YYText'
-    s.dependency 'YYWebImage'
     s.dependency 'KVOController'
-    s.dependency 'ZipArchive'
-    s.dependency 'Masonry'
+
+    s.subspec 'UI' do |ui|
+        ui.dependency 'YYModel'
+        ui.dependency 'YYText'
+        ui.dependency 'YYWebImage'
+        ui.dependency 'Masonry'
+    end
+    
+    s.subspec 'Zip' do |zip|
+        zip.dependency 'ZipArchive'
+    end
 end
