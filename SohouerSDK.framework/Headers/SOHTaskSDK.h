@@ -8,16 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+#if __has_include(<SohouerSDK/SOHTaskSDK.h>)
 FOUNDATION_EXPORT const unsigned char SohouerSDKVersionString[];
 FOUNDATION_EXPORT double SohouerSDKVersionNumber;
-
-
-#import "SHESDKUser.h"
-#import "NSString+SOHAdd.h"
-#import "SOHCategories.h"
-#import "NSObject+YYModel.h"
-#import "UIImageView+YYWebImage.h"
-#import "NSObject+FBKVOController.h"
+#import <YYModel/YYModel.h>
+#import <YYWebImage/YYWebImage.h>
+#import <KVOController/KVOController.h>
+#else
+#import "YYModel.h"
+#import "YYWebImage.h"
+#import "FBKVOController.h"
+#endif
 
 #define MAS_SHORTHAND
 #define MAS_SHORTHAND_GLOBALS

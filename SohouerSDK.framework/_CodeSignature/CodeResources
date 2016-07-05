@@ -4,41 +4,30 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Headers/SOHCategories.h</key>
+		<key>.DS_Store</key>
 		<data>
-		KJXlPgsHjfFflInK37JXDLa6nHk=
+		EpLigG3LZBX1no8tw+eEE7gCOiw=
 		</data>
 		<key>Headers/SOHTaskSDK.h</key>
 		<data>
-		4rCPsbm4CdIB92VPrZydj2f82xU=
+		EQvhkLRqeOwqLsyUrFy1Ll2aXLU=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		BMwuN2hySZfjzqHIQDZL6AmiNCI=
+		hDOvfBjf8zkxpMllwW7pbgomDYA=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Headers/SOHCategories.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			KJXlPgsHjfFflInK37JXDLa6nHk=
-			</data>
-			<key>hash2</key>
-			<data>
-			I9ts3OFFrU0pgB7dVZb90FsxOVsomdcJy+/WuTfGeeM=
-			</data>
-		</dict>
 		<key>Headers/SOHTaskSDK.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			4rCPsbm4CdIB92VPrZydj2f82xU=
+			EQvhkLRqeOwqLsyUrFy1Ll2aXLU=
 			</data>
 			<key>hash2</key>
 			<data>
-			uvhmVmy2Y3EW98Psec7qPc8eMPvU6xcQRxSWYRwghtU=
+			G35ElIojvzkxz8BBQcD1JtYVjO2PHlqLkKw06q7oRpo=
 			</data>
 		</dict>
 	</dict>
