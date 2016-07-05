@@ -8,14 +8,18 @@ Pod::Spec.new do |s|
     s.platform     = :ios, "7.0"
     s.ios.deployment_target = "7.0"
     s.source       = { :git => "https://github.com/bllny/SOHTaskSDK.git", :tag => s.version.to_s }
-    s.vendored_frameworks = 'SohouerSDK.framework'
-    s.resources    = 'SohouerSDK.bundle'
-    s.frameworks   = 'UIKit','Security','Foundation', 'AdSupport','MobileCoreServices','JavaScriptCore'
 
-    s.dependency 'AFNetworking'
-    s.dependency 'KVOController'
+	s.default_subspec = 'Core'
+    s.subspec 'Core' do |core|
+	    core.vendored_frameworks = 'SohouerSDK.framework'
+	    core.resource = 'SohouerSDK.bundle'
+        core.frameworks   = 'UIKit','Security','Foundation', 'AdSupport','MobileCoreServices','JavaScriptCore'
+        core.dependency 'AFNetworking'
+        core.dependency 'KVOController'
+    end
 
     s.subspec 'UI' do |ui|
+	    ui.dependency 'SOHTaskSDK/Core'
         ui.dependency 'YYModel'
         ui.dependency 'YYText'
         ui.dependency 'YYWebImage'
@@ -23,6 +27,7 @@ Pod::Spec.new do |s|
     end
     
     s.subspec 'Zip' do |zip|
+    	zip.dependency 'SOHTaskSDK/Core'
         zip.dependency 'ZipArchive'
     end
 end
