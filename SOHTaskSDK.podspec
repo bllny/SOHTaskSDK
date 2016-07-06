@@ -7,29 +7,30 @@ Pod::Spec.new do |s|
     s.author       = { "jiangzhou" => "jiangzhoubai@gmail.com" }
     s.platform     = :ios, "7.0"
     s.ios.deployment_target = "7.0"
-    s.source       = { :git => "https://github.com/bllny/SOHTaskSDK.git", :tag => s.version.to_s }
+    s.source       = { :git => "https://github.com/bllny/SOHTaskSDK.git", :tag => s.version, :submodules => true }
 
-	s.default_subspec = 'Task'
+	s.default_subspec = 'ss'
     s.subspec 'Task' do |task|
-	    task.vendored_frameworks    = 'SohouerSDK.framework'
-	    task.resource	            = 'SohouerSDK.bundle'
-        task.frameworks             = 'UIKit','Security','Foundation', 'AdSupport','MobileCoreServices','JavaScriptCore'
-        task.public_header_files    = 'ZipArchive/*.h'
-        task.compiler_flags = '-Dunix'
+	    ss.vendored_frameworks    = 'SohouerSDK.framework'
+	    ss.resource	            = 'SohouerSDK.bundle'
+        ss.frameworks             = 'UIKit','Security','Foundation', 'AdSupport','MobileCoreServices','JavaScriptCore'
+        ss.public_header_files    = 'ZipArchive/*.h'
+        ss.compiler_flags = '-Dunix'
             
-        task.dependency 'AFNetworking'
-        task.dependency 'KVOController'
-        task.dependency 'YYModel'
-        task.dependency 'YYText'
-        task.dependency 'YYWebImage'
-        task.dependency 'Masonry'
+        ss.dependency 'AFNetworking'
+        ss.dependency 'KVOController'
+        ss.dependency 'YYModel'
+        ss.dependency 'YYText'
+        ss.dependency 'YYWebImage'
+        ss.dependency 'Masonry'
     end
     
-    s.subspec 'TaskZipLib' do |zip|
-	    zip.public_header_files     = 'ZipArchive/*.h'
-        zip.source_files            = 'ZipArchive/*.{h,m}', 'ZipArchive/minizip/crypt.{h,c}', 'ZipArchive/minizip/ioapi.{h,c}', 'ZipArchive/minizip/mztools.{h,c}', 'ZipArchive/minizip/unzip.{h,c}', 'ZipArchive/minizip/zip.{h,c}'
-	    zip.dependency 'SOHTaskSDK/Task'
-        zip.library   = 'z'
-        zip.compiler_flags = '-Dunix'
+    s.subspec 'TaskZipLib' do |ss|
+	    ss.public_header_files      = 'ZipArchive/*.h'
+        ss.source_files             = 'ZipArchive/*.{h,m}', 'ZipArchive/minizip/crypt.{h,c}', 'ZipArchive/minizip/ioapi.{h,c}', 'ZipArchive/minizip/mztools.{h,c}', 'ZipArchive/minizip/unzip.{h,c}', 'ZipArchive/minizip/zip.{h,c}'
+	    ss.dependency 'SOHTaskSDK/Task'
+        ss.library                  = 'z'
+        ss.requires_arc             = false
+        ss.compiler_flags           = '-Dunix'
     end
 end
