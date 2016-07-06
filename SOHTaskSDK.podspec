@@ -33,5 +33,7 @@ Pod::Spec.new do |s|
     s.subspec 'TaskZip' do |ss|
 	    ss.dependency 'SOHTaskSDK/ZipArchive'
 	    ss.dependency 'SOHTaskSDK/Task'
+	    ss.vendored_frameworks      = 'SohouerSDK.framework'
+	    ss.resource	                = 'SohouerSDK.bundle'
     end
 end
