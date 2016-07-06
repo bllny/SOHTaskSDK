@@ -11,11 +11,10 @@ Pod::Spec.new do |s|
 
 	s.default_subspec = 'ss'
     s.subspec 'Task' do |task|
-	    ss.vendored_frameworks    = 'SohouerSDK.framework'
-	    ss.resource	            = 'SohouerSDK.bundle'
-        ss.frameworks             = 'UIKit','Security','Foundation', 'AdSupport','MobileCoreServices','JavaScriptCore'
-        ss.public_header_files    = 'ZipArchive/*.h'
-        ss.compiler_flags = '-Dunix'
+	    ss.vendored_frameworks      = 'SohouerSDK.framework'
+	    ss.resource	                = 'SohouerSDK.bundle'
+        ss.frameworks	            = 'UIKit','Security','Foundation', 'AdSupport','MobileCoreServices','JavaScriptCore'
+        ss.public_header_files	    = 'ZipArchive/*.h'
             
         ss.dependency 'AFNetworking'
         ss.dependency 'KVOController'
