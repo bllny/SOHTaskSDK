@@ -15,13 +15,14 @@ Pod::Spec.new do |s|
 	    task.resource	            = 'SohouerSDK.bundle'
         task.frameworks             = 'UIKit','Security','Foundation', 'AdSupport','MobileCoreServices','JavaScriptCore'
         task.public_header_files    = 'ZipArchive/*.h'
+        task.compiler_flags = '-Dunix'
+            
         task.dependency 'AFNetworking'
         task.dependency 'KVOController'
         task.dependency 'YYModel'
         task.dependency 'YYText'
         task.dependency 'YYWebImage'
         task.dependency 'Masonry'
-        task.compiler_flags = '-Dunix'
     end
     
     s.subspec 'TaskZipLib' do |zip|
