@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "SOHTaskSDK"
-    s.version      = "0.1.0"
+    s.version      = "0.1.1"
     s.summary      = "搜猴儿任务管理SDK"
     s.homepage     = "http://www.sohouer.com/fans"
     s.license = { :"type" => "Copyright", :"text" => " Copyright 2016 Sohouer "}
@@ -20,6 +20,7 @@ Pod::Spec.new do |s|
 
     s.subspec 'UI' do |ui|
 	    ui.dependency 'SOHTaskSDK/Core'
+        ui.source_files = 'ZipArchive/*.h', 'ZipArchive/minizip/crypt.h', 'ZipArchive/minizip/ioapi.h', 'ZipArchive/minizip/mztools.h', 'ZipArchive/minizip/unzip.h', 'ZipArchive/minizip/zip.h'
         ui.dependency 'YYModel'
         ui.dependency 'YYText'
         ui.dependency 'YYWebImage'
@@ -28,6 +29,6 @@ Pod::Spec.new do |s|
     
     s.subspec 'Zip' do |zip|
     	zip.dependency 'SOHTaskSDK/Core'
-        zip.dependency 'ZipArchive'
+        zip.source_files = 'ZipArchive/*.{h,m}', 'ZipArchive/minizip/crypt.{h,c}', 'ZipArchive/minizip/ioapi.{h,c}', 'ZipArchive/minizip/mztools.{h,c}', 'ZipArchive/minizip/unzip.{h,c}', 'ZipArchive/minizip/zip.{h,c}'
     end
 end
