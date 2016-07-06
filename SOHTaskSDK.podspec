@@ -9,27 +9,26 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = "7.0"
     s.source       = { :git => "https://github.com/bllny/SOHTaskSDK.git", :tag => s.version.to_s }
 
-	s.default_subspec = 'Core'
-    s.subspec 'Core' do |core|
-	    core.vendored_frameworks    = 'SohouerSDK.framework'
-	    core.resource	            = 'SohouerSDK.bundle'
-        core.frameworks             = 'UIKit','Security','Foundation', 'AdSupport','MobileCoreServices','JavaScriptCore'
-        core.dependency 'AFNetworking'
-        core.dependency 'KVOController'
-    end
-
-    s.subspec 'UI' do |ui|
-        ui.public_header_files = 'ZipArchive/*.h'
-	    ui.dependency 'SOHTaskSDK/Core'
-        ui.dependency 'YYModel'
-        ui.dependency 'YYText'
-        ui.dependency 'YYWebImage'
-        ui.dependency 'Masonry'
+	s.default_subspec = 'Task'
+    s.subspec 'Task' do |task|
+	    task.vendored_frameworks    = 'SohouerSDK.framework'
+	    task.resource	            = 'SohouerSDK.bundle'
+        task.frameworks             = 'UIKit','Security','Foundation', 'AdSupport','MobileCoreServices','JavaScriptCore'
+        task.public_header_files    = 'ZipArchive/*.h'
+        task.dependency 'AFNetworking'
+        task.dependency 'KVOController'
+        task.dependency 'YYModel'
+        task.dependency 'YYText'
+        task.dependency 'YYWebImage'
+        task.dependency 'Masonry'
+        task.compiler_flags = '-Dunix'
     end
     
-    s.subspec 'Zip' do |zip|
+    s.subspec 'TaskZipLib' do |zip|
 	    zip.public_header_files     = 'ZipArchive/*.h'
         zip.source_files            = 'ZipArchive/*.{h,m}', 'ZipArchive/minizip/crypt.{h,c}', 'ZipArchive/minizip/ioapi.{h,c}', 'ZipArchive/minizip/mztools.{h,c}', 'ZipArchive/minizip/unzip.{h,c}', 'ZipArchive/minizip/zip.{h,c}'
-	    zip.dependency 'SOHTaskSDK/Core'
+	    zip.dependency 'SOHTaskSDK/Task'
+        zip.library   = 'z'
+        zip.compiler_flags = '-Dunix'
     end
 end
