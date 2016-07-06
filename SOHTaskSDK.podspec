@@ -15,7 +15,6 @@ Pod::Spec.new do |s|
 	    ss.resource	                = 'SohouerSDK.bundle'
         ss.frameworks	            = 'UIKit','Security','Foundation', 'AdSupport','MobileCoreServices','JavaScriptCore'
         ss.public_header_files	    = 'ZipArchive/*.h'
-            
         ss.dependency 'AFNetworking'
         ss.dependency 'KVOController'
         ss.dependency 'YYModel'
