@@ -11,18 +11,25 @@
 #if __has_include(<SohouerSDK/SOHTaskSDK.h>)
 FOUNDATION_EXPORT const unsigned char SohouerSDKVersionString[];
 FOUNDATION_EXPORT double SohouerSDKVersionNumber;
-#import <YYModel/YYModel.h>
-#import <YYWebImage/YYWebImage.h>
-#import <KVOController/KVOController.h>
-#else
-#import "YYModel.h"
-#import "YYWebImage.h"
-#import "FBKVOController.h"
-#endif
+
 
 #define MAS_SHORTHAND
 #define MAS_SHORTHAND_GLOBALS
+
+#import <YYModel/YYModel.h>
+#import <YYWebImage/YYWebImage.h>
+#import <KVOController/KVOController.h>
+#import <Masonry/Masonry.h>
+
+#else
+
+#import "YYModel.h"
+#import "YYWebImage.h"
+#import "FBKVOController.h"
 #import "Masonry.h"
+
+#endif
+
 
 @class SOHTaskListViewController;
 

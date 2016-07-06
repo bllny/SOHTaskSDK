@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "SOHTaskSDK"
-    s.version      = "0.1.1"
+    s.version      = "0.1.2"
     s.summary      = "搜猴儿任务管理SDK"
     s.homepage     = "http://www.sohouer.com/fans"
     s.license = { :"type" => "Copyright", :"text" => " Copyright 2016 Sohouer "}
@@ -17,10 +17,6 @@ Pod::Spec.new do |s|
         ss.dependency 'YYText'
         ss.dependency 'YYWebImage'
         ss.dependency 'Masonry'
-
-	    ss.public_header_files	    = 'ZipArchive/*.h'
-        ss.source_files             = 'ZipArchive/*.{h}'
-
 	    ss.vendored_frameworks      = 'SohouerSDK.framework'
 	    ss.resource	                = 'SohouerSDK.bundle'
         ss.frameworks	            = 'UIKit','Security','Foundation', 'AdSupport','MobileCoreServices','JavaScriptCore'
