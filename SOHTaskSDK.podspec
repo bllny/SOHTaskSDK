@@ -9,8 +9,8 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = "7.0"
     s.source       = { :git => "https://github.com/bllny/SOHTaskSDK.git", :tag => s.version, :submodules => true }
 
-	s.default_subspec = 'ss'
-    s.subspec 'Task' do |task|
+	s.default_subspec = 'Task'
+    s.subspec 'Task' do |ss|
 	    ss.vendored_frameworks      = 'SohouerSDK.framework'
 	    ss.resource	                = 'SohouerSDK.bundle'
         ss.frameworks	            = 'UIKit','Security','Foundation', 'AdSupport','MobileCoreServices','JavaScriptCore'
