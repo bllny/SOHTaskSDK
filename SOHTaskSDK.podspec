@@ -19,18 +19,19 @@ Pod::Spec.new do |s|
         ss.dependency 'Masonry'
 
 	    ss.public_header_files	    = 'ZipArchive/*.h'
-        
+        ss.source_files             = 'ZipArchive/*.{h}'
+
 	    ss.vendored_frameworks      = 'SohouerSDK.framework'
 	    ss.resource	                = 'SohouerSDK.bundle'
         ss.frameworks	            = 'UIKit','Security','Foundation', 'AdSupport','MobileCoreServices','JavaScriptCore'
 	end
     
 	s.subspec 'ZipArchive' do |ss|
-        ss.source_files = '*.{h,m}', 'minizip/crypt.{h,c}', 'minizip/ioapi.{h,c}', 'minizip/mztools.{h,c}', 'minizip/unzip.{h,c}', 'minizip/zip.{h,c}'
-        ss.public_header_files = '*.h'
-        ss.library   = 'z'
-        ss.requires_arc = false
-        ss.compiler_flags = '-Dunix'
+        ss.source_files             = 'ZipArchive/*.{h,m}', 'ZipArchive/minizip/crypt.{h,c}', 'ZipArchive/minizip/ioapi.{h,c}', 'ZipArchive/minizip/mztools.{h,c}', 'ZipArchive/minizip/unzip.{h,c}', 'ZipArchive/minizip/zip.{h,c}'
+        ss.public_header_files      = 'ZipArchive/*.h'
+        ss.library                  = 'z'
+        ss.requires_arc	            = false
+        ss.compiler_flags	        = '-Dunix'
     end
 
     s.subspec 'TaskZip' do |ss|
