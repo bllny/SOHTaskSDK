@@ -1,4 +1,4 @@
-# Inhouse版本使用步骤
+# 使用步骤
 一、Cocoapods方式
 
 	 pod 'SOHTaskSDK'
@@ -20,13 +20,14 @@
 
 ##调用步骤
 1. 选择Capabilities中的Background Modes中的Audio,AirPlay And Picture in Picture
-2. 初始化SDK,传入AppKey,AppSecret
+2. 导入头文件 ``` #import <SohouerSDK/SOHTaskSDK.h> ```
+3. 初始化SDK,传入AppKey,AppSecret
 
 	```
 	    [SOHTaskSDK registerSDK:AppKey appSecret:AppSecret delegate:self];
 	```
 	
-3. 调用登录方法, 传入接入方App的用户标识ID。
+4. 调用登录方法, 传入接入方App的用户标识ID。
 
 	```
 	[SOHTask login:userID callback:^(BOOL result,NSString * message) {
@@ -35,7 +36,7 @@
 		}
 	}];
 	```
-4. Delegate描述：以下回调都在主线程内
+5. Delegate描述：以下回调都在主线程内
 
 	```
 	@protocol SOHTaskSDKRegiseterDelegate <NSObject>
@@ -50,7 +51,7 @@
 	- (void) loginFailed:(NSString *)errorMessage;
 	@end 
 	```
-5. 打开任务模块时，请使用
+6. 打开任务模块时，请使用
 	
 	```
 	UIViewController * taskListVC = [SOHTask taskViewController];
