@@ -30,7 +30,7 @@
 4. 调用登录方法, 传入接入方App的用户标识ID。
 
 	```
-	[SOHTask login:userID callback:^(BOOL result,NSString * message) {
+	[SOHTaskSDK login:userID callback:^(BOOL result,NSString * message) {
 		if (result ){
 			/// 登录成功
 		}
