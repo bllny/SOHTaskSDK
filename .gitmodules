@@ -1,0 +1,3 @@
+[submodule "SohouerSDK/ZipArchive"]
+	path = SohouerSDK/ZipArchive
+	url = git@github.com:mattconnolly/ZipArchive.git
