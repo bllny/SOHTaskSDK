@@ -9,7 +9,7 @@
     s.ios.deployment_target = "7.0"
     s.source       = { :git => "https://github.com/bllny/SOHTaskSDK.git", :tag => s.version, :submodules => true }
 
-	s.default_subspec = 'TaskZip'
+	s.default_subspec = 'Task'
     s.subspec 'Task' do |ss|
 	    ss.dependency 'AFNetworking'
         ss.dependency 'KVOController'
