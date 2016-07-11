@@ -4,13 +4,17 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>.DS_Store</key>
+		<data>
+		IYj85kHzS4fqdpfw4L3d7mV1QmY=
+		</data>
 		<key>Headers/SOHTaskSDK.h</key>
 		<data>
 		a+3v2BlHtSgFcx4MzAVZxP3pX9I=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ingyGHt5YBz97g21JXkboDb+cT0=
+		lEQyz9j8t4o5liccxoyDRDrFSkY=
 		</data>
 	</dict>
 	<key>files2</key>
