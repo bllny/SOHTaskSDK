@@ -12,7 +12,6 @@
 FOUNDATION_EXPORT const unsigned char SohouerSDKVersionString[];
 FOUNDATION_EXPORT double SohouerSDKVersionNumber;
 
-
 #define MAS_SHORTHAND
 #define MAS_SHORTHAND_GLOBALS
 
