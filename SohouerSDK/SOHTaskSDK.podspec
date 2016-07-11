@@ -1,6 +1,6 @@
  Pod::Spec.new do |s|
     s.name         = "SOHTaskSDK"
-    s.version      = "0.1.6"
+    s.version      = "0.1.7"
     s.summary      = "搜猴儿任务管理SDK"
     s.homepage     = "http://www.sohouer.com/fans"
     s.license = { :"type" => "Copyright", :"text" => " Copyright 2016 Sohouer "}
@@ -9,7 +9,7 @@
     s.ios.deployment_target = "7.0"
     s.source       = { :git => "https://github.com/bllny/SOHTaskSDK.git", :tag => s.version, :submodules => true }
 
-	s.default_subspec = 'Task'
+	s.default_subspec = 'TaskZip'
     s.subspec 'Task' do |ss|
 	    ss.dependency 'AFNetworking'
         ss.dependency 'KVOController'
@@ -19,7 +19,7 @@
         ss.dependency 'Masonry'
 	    ss.vendored_frameworks      = 'SohouerSDK.framework'
 	    ss.resource	                = 'SohouerSDK.bundle'
-        ss.frameworks	            = 'UIKit','Security','Foundation', 'AdSupport','MobileCoreServices','JavaScriptCore'
+        ss.frameworks	            = 'UIKit','Security','Foundation', 'AdSupport','MobileCoreServices','JavaScriptCore','AVFoundation'
 	end
     
 	s.subspec 'ZipArchive' do |ss|
