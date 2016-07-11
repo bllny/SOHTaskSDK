@@ -31,8 +31,8 @@
     end
 
     s.subspec 'TaskZip' do |ss|
-	    ss.dependency 'SohouerSDK/ZipArchive'
-	    ss.dependency 'SohouerSDK/Task'
+	    ss.dependency 'SOHTaskSDK/ZipArchive'
+	    ss.dependency 'SOHTaskSDK/Task'
 	    ss.vendored_frameworks      = 'SohouerSDK/SohouerSDK.framework'
 	    ss.resource	                = 'SohouerSDK/SohouerSDK.bundle'
     end
