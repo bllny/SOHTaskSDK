@@ -73,7 +73,7 @@ FOUNDATION_EXPORT double SohouerSDKVersionNumber;
  *
  *  @return <#return value description#>
  */
-+ (SOHTaskListViewController *) taskListViewController;
++ (UIViewController *) taskListViewController;
 
 + (NSNumber *) sdkVersion;
 
