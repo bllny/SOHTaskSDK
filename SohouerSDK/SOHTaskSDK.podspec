@@ -17,14 +17,14 @@
         ss.dependency 'YYText'
         ss.dependency 'YYWebImage'
         ss.dependency 'Masonry'
-	    ss.vendored_frameworks      = 'SohouerSDK.framework'
-	    ss.resource	                = 'SohouerSDK.bundle'
+	    ss.vendored_frameworks      = 'SOHTaskSDK/SohouerSDK.framework'
+	    ss.resource	                = 'SOHTaskSDK/SohouerSDK.bundle'
         ss.frameworks	            = 'UIKit','Security','Foundation', 'AdSupport','MobileCoreServices','JavaScriptCore','AVFoundation'
 	end
     
 	s.subspec 'ZipArchive' do |ss|
-        ss.source_files             = 'ZipArchive/*.{h,m}', 'ZipArchive/minizip/crypt.{h,c}', 'ZipArchive/minizip/ioapi.{h,c}', 'ZipArchive/minizip/mztools.{h,c}', 'ZipArchive/minizip/unzip.{h,c}', 'ZipArchive/minizip/zip.{h,c}'
-        ss.public_header_files      = 'ZipArchive/*.h'
+        ss.source_files             = 'SOHTaskSDK/ZipArchive/*.{h,m}', 'SOHTaskSDK/ZipArchive/minizip/crypt.{h,c}', 'SOHTaskSDK/ZipArchive/minizip/ioapi.{h,c}', 'SOHTaskSDK/ZipArchive/minizip/mztools.{h,c}', 'SOHTaskSDK/ZipArchive/minizip/unzip.{h,c}', 'SOHTaskSDK/ZipArchive/minizip/zip.{h,c}'
+        ss.public_header_files      = 'SOHTaskSDK/ZipArchive/*.h'
         ss.library                  = 'z'
         ss.requires_arc	            = false
         ss.compiler_flags	        = '-Dunix'
@@ -33,7 +33,7 @@
     s.subspec 'TaskZip' do |ss|
 	    ss.dependency 'SOHTaskSDK/ZipArchive'
 	    ss.dependency 'SOHTaskSDK/Task'
-	    ss.vendored_frameworks      = 'SohouerSDK.framework'
-	    ss.resource	                = 'SohouerSDK.bundle'
+	    ss.vendored_frameworks      = 'SOHTaskSDK/SohouerSDK.framework'
+	    ss.resource	                = 'SOHTaskSDK/SohouerSDK.bundle'
     end
 end
