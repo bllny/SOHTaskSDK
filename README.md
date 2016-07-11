@@ -50,7 +50,7 @@
 6. 打开任务模块时，请使用
 	
 	```
-	UIViewController * taskListVC = [SOHTask taskViewController];
+	UIViewController * taskListVC = [SOHTask taskListViewController];
 	[self.navigationController pushViewController:taskListVC animated:YES];
 	``` 
 	TaskListViewController中 还可以接受 ```kAppLoginSuccessNotifi```通知 来处理先展示界面然后刷新界面。
