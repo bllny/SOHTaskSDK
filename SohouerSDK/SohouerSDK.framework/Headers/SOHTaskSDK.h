@@ -19,6 +19,7 @@ FOUNDATION_EXPORT double SohouerSDKVersionNumber;
 #import <YYWebImage/YYWebImage.h>
 #import <KVOController/KVOController.h>
 #import <Masonry/Masonry.h>
+#import <SohouerSDK/SOHAudioManager.h>
 
 #else
 
@@ -26,7 +27,7 @@ FOUNDATION_EXPORT double SohouerSDKVersionNumber;
 #import "YYWebImage.h"
 #import "FBKVOController.h"
 #import "Masonry.h"
-
+#import "SOHAudioManager.h"
 #endif
 
 
@@ -84,6 +85,8 @@ FOUNDATION_EXPORT double SohouerSDKVersionNumber;
 
 @interface SOHTaskSDK (UI)
 
-@property (nonatomic,strong) UIColor * navgationBGColor;
++ (void) setNavgationBGColor:(UIColor *)color;
++ (void) setNavgationBackColor:(UIColor *)color;
++ (void) setNavgationTitleColor:(UIColor *)color;
 
 @end

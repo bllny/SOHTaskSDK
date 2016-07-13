@@ -28,6 +28,13 @@
     
     //初始化SDK，并注册用户
     [SOHTaskSDK registerSDK:@"83cc62c3a2c58bead42d0433b977ee9a" appSecret:@"1534eb4bc1110fed96186298c7d5c297" delegate:self];
+    [SOHTaskSDK setNavgationTitleColor:[UIColor blueColor]];
+    [SOHTaskSDK setNavgationBackColor:[UIColor blueColor]];
+    [SOHTaskSDK setNavgationBGColor:[UIColor redColor]];
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
 }
 
 - (void) registerSuccess {
@@ -50,10 +57,6 @@
 }
 
 
-- (void)viewWillAppear:(BOOL)animated {
-    self.clearsSelectionOnViewWillAppear = self.splitViewController.isCollapsed;
-    [super viewWillAppear:animated];
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

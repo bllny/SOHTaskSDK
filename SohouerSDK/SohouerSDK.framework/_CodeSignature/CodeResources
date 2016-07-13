@@ -4,30 +4,41 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>.DS_Store</key>
+		<key>Headers/SOHAudioManager.h</key>
 		<data>
-		IYj85kHzS4fqdpfw4L3d7mV1QmY=
+		doiI8MDh+uglsTI4JLHDdCjuh9Q=
 		</data>
 		<key>Headers/SOHTaskSDK.h</key>
 		<data>
-		a+3v2BlHtSgFcx4MzAVZxP3pX9I=
+		+aHLfBSxRsL51F7RMuJ3lUxe9Co=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		lEQyz9j8t4o5liccxoyDRDrFSkY=
+		gMAX2uiADWjWyXs2TiH8BPVIDxE=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Headers/SOHAudioManager.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			doiI8MDh+uglsTI4JLHDdCjuh9Q=
+			</data>
+			<key>hash2</key>
+			<data>
+			SNF4EYWZrQaM0KzKTNi7MWhspVj1kuQghYIqo5LTVK8=
+			</data>
+		</dict>
 		<key>Headers/SOHTaskSDK.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			a+3v2BlHtSgFcx4MzAVZxP3pX9I=
+			+aHLfBSxRsL51F7RMuJ3lUxe9Co=
 			</data>
 			<key>hash2</key>
 			<data>
-			LRQhOG5mUol3HlqyBNdNFo1MQ5U13Bw8+DEfsBdkrQY=
+			r7VlPmqT8vs5MBvqRcaw9opa2u4DyVUoBXKfWo9ckn0=
 			</data>
 		</dict>
 	</dict>
