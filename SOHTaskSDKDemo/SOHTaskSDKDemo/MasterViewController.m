@@ -40,7 +40,7 @@
 - (void) registerSuccess {
     NSLog(@"注册成功");
     //推荐：注册成功后，再登录
-    [SOHTaskSDK login:@"123321" name:@"jiangzhou" delegate:self];
+    [SOHTaskSDK login:@"123321" name:@"" delegate:self];
 }
 
 - (void) registerFailed:(NSString *)errorMessage {
