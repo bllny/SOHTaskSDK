@@ -20,6 +20,7 @@ FOUNDATION_EXPORT double SohouerSDKVersionNumber;
 #import <KVOController/KVOController.h>
 #import <Masonry/Masonry.h>
 #import <SohouerSDK/SOHAudioManager.h>
+#import <SohouerSDK/SOHTaskListViewController.h>
 
 #else
 
@@ -28,6 +29,8 @@ FOUNDATION_EXPORT double SohouerSDKVersionNumber;
 #import "FBKVOController.h"
 #import "Masonry.h"
 #import "SOHAudioManager.h"
+#import "SOHTaskListViewController.h"
+
 #endif
 
 
@@ -46,6 +49,8 @@ FOUNDATION_EXPORT double SohouerSDKVersionNumber;
 - (void) loginFailed:(NSString *)errorMessage;
 
 @end
+
+
 
 
 @interface SOHTaskSDK : NSObject
@@ -69,16 +74,31 @@ FOUNDATION_EXPORT double SohouerSDKVersionNumber;
  */
 + (NSNumber *) userLevel;
 
+
++ (BOOL) isHasUdid;
+
+/**
+ *  判断bundleID是否安装
+ *
+ *  @param bundleID <#bundleID description#>
+ *
+ *  @return <#return value description#>
+ */
++ (BOOL) appIsInstalled:(NSString *)bundleID;
+
+
++ (void) reloadScript:(NSString *)scriptPath;
+
 /**
  *  任务列表Controller
  *
  *  @return <#return value description#>
  */
-+ (UIViewController *) taskListViewController;
++ (SOHTaskListViewController *) taskListViewController;
+
++ (void) setDebugMode:(BOOL) debug;
 
 + (NSNumber *) sdkVersion;
-
-+ (void) handleUrl:(NSURL *)url;
 
 @end
 

@@ -8,13 +8,17 @@
 		<data>
 		doiI8MDh+uglsTI4JLHDdCjuh9Q=
 		</data>
+		<key>Headers/SOHTaskListViewController.h</key>
+		<data>
+		45lhmzpFI1cCGwDtxH4Wt9xw/fA=
+		</data>
 		<key>Headers/SOHTaskSDK.h</key>
 		<data>
-		+aHLfBSxRsL51F7RMuJ3lUxe9Co=
+		0SPVcqWiCSuMN/4gGYKdKdDD0Qo=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		20ZBoGjSotle6QvPfzgvklO0oYs=
+		aP/ONTPIO+CEOrMN7sf8IhtWc4c=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -30,15 +34,26 @@
 			SNF4EYWZrQaM0KzKTNi7MWhspVj1kuQghYIqo5LTVK8=
 			</data>
 		</dict>
+		<key>Headers/SOHTaskListViewController.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			45lhmzpFI1cCGwDtxH4Wt9xw/fA=
+			</data>
+			<key>hash2</key>
+			<data>
+			2wR61lnZnOUQOJERzlkzskJAJrZ5+y2IEal6oMCJJck=
+			</data>
+		</dict>
 		<key>Headers/SOHTaskSDK.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+aHLfBSxRsL51F7RMuJ3lUxe9Co=
+			0SPVcqWiCSuMN/4gGYKdKdDD0Qo=
 			</data>
 			<key>hash2</key>
 			<data>
-			r7VlPmqT8vs5MBvqRcaw9opa2u4DyVUoBXKfWo9ckn0=
+			36ybKT1MZBZtL9YDEJa0spZGXw2Jp5ejULHWANf5Wlc=
 			</data>
 		</dict>
 	</dict>
