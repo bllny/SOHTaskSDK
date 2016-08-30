@@ -1,6 +1,6 @@
  Pod::Spec.new do |s|
     s.name         = "SOHTaskSDK"
-    s.version      = "0.2.0"
+    s.version      = "0.2.1"
     s.summary      = "搜猴儿任务管理SDK"
     s.homepage     = "http://www.sohouer.com/fans"
     s.license = { :"type" => "Copyright", :"text" => " Copyright 2016 Sohouer "}
