@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SHETaskManager.h"
-#import "SHEBaseManager.h"
+#import "SOHTaskSDKDelegate.h"
 
 @protocol SOHTaskSDKTaskListDelegate <NSObject>
 - (BOOL) didSelectTaskAtIndexPath:(NSIndexPath *)indexPath;
