@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>.DS_Store</key>
+		<data>
+		CLjXz/0xj3x3MZT7gaHQ9ZG8OgU=
+		</data>
 		<key>Headers/SOHAudioManager.h</key>
 		<data>
 		doiI8MDh+uglsTI4JLHDdCjuh9Q=
@@ -15,6 +19,10 @@
 		<key>Headers/SOHTaskSDK.h</key>
 		<data>
 		0SPVcqWiCSuMN/4gGYKdKdDD0Qo=
+		</data>
+		<key>Headers/SOHTaskSDKDelegate.h</key>
+		<data>
+		G2QCJCS/8tJl3ytUFWIezAjOxqQ=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -54,6 +62,17 @@
 			<key>hash2</key>
 			<data>
 			36ybKT1MZBZtL9YDEJa0spZGXw2Jp5ejULHWANf5Wlc=
+			</data>
+		</dict>
+		<key>Headers/SOHTaskSDKDelegate.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			G2QCJCS/8tJl3ytUFWIezAjOxqQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			2tf5DWqCRtlGeK7/D07Xg2aMLhPg+mVrIXEGX3ArBNI=
 			</data>
 		</dict>
 	</dict>
