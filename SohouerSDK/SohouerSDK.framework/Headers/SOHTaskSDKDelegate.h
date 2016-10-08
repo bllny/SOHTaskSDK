@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol SHEAPIManagerCallbackDataReformer <NSObject>
+- (id)manager:(id)manager reformData:(NSDictionary *)data;
+@end
+
 // api回调
 @protocol SHEAPIManagerApiCallBackDelegate <NSObject>
 @required

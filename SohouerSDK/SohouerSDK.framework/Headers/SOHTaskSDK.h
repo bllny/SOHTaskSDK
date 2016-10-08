@@ -8,6 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+
+#if __has_include(<CocoaLumberjack/CocoaLumberjack.h>)
+#import <CocoaLumberjack/CocoaLumberjack.h>
+#if DEBUG
+static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
+#else
+static const DDLogLevel ddLogLevel = DDLogLevelError;
+#endif
+#else
+#define DDLogDebug
+#define DDLogError
+#endif
+
 #if __has_include(<SohouerSDK/SOHTaskSDK.h>)
 FOUNDATION_EXPORT const unsigned char SohouerSDKVersionString[];
 FOUNDATION_EXPORT double SohouerSDKVersionNumber;
@@ -51,9 +64,9 @@ FOUNDATION_EXPORT double SohouerSDKVersionNumber;
 @end
 
 
-
-
 @interface SOHTaskSDK : NSObject
+
++ (BOOL) initSDK;
 
 + (void) registerSDK:(NSString *)appkey appSecret:(NSString *)appSecret delegate:(__weak id<SOHTaskSDKRegiseterDelegate>)delegate;
 
@@ -92,7 +105,7 @@ FOUNDATION_EXPORT double SohouerSDKVersionNumber;
 /**
  *  任务列表Controller
  *
- *  @return <#return value description#>
+ *  @return return value description
  */
 + (SOHTaskListViewController *) taskListViewController;
 

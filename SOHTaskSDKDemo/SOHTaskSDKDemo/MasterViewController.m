@@ -9,6 +9,7 @@
 #import "MasterViewController.h"
 #import "DetailViewController.h"
 #import <SohouerSDK/SOHTaskSDK.h>
+#import <SohouerSDK/SOHTaskListViewController.h>
 
 @interface MasterViewController ()<SOHTaskSDKRegiseterDelegate,SOHTaskSDKLoginDelegate>
 
@@ -27,7 +28,9 @@
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     
     //初始化SDK，并注册用户
-    [SOHTaskSDK registerSDK:@"83cc62c3a2c58bead42d0433b977ee9a" appSecret:@"1534eb4bc1110fed96186298c7d5c297" delegate:self];
+    [SOHTaskSDK setDebugMode:YES];
+//    [SOHTaskSDK registerSDK:@"133698d1ccb2c2cd077f6d11e2520a85" appSecret:@"0cf3747ad26b4de5a943f35ad637023c" delegate:self];
+    [SOHTaskSDK registerSDK:@"bd82e243a582a8ff1bad28988936f223" appSecret:@"14b148c4a7dbc1f56f335c1c91148d45" delegate:self];
     [SOHTaskSDK setNavgationTitleColor:[UIColor blueColor]];
     [SOHTaskSDK setNavgationBackColor:[UIColor blueColor]];
     [SOHTaskSDK setNavgationBGColor:[UIColor redColor]];
@@ -40,7 +43,7 @@
 - (void) registerSuccess {
     NSLog(@"注册成功");
     //推荐：注册成功后，再登录
-    [SOHTaskSDK login:@"123321" name:@"" delegate:self];
+    
 }
 
 - (void) registerFailed:(NSString *)errorMessage {
@@ -49,14 +52,11 @@
 
 - (void) loginSuccess {
     NSLog(@"登录成功");
-    [self.navigationController pushViewController:[SOHTaskSDK taskListViewController] animated:YES];
 }
 
 - (void) loginFailed:(NSString *)errorMessage{
-    NSLog(@"登录失败");
+    NSLog(@"%@",errorMessage);
 }
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -64,12 +64,12 @@
 }
 
 - (void)insertNewObject:(id)sender {
-    if (!self.objects) {
-        self.objects = [[NSMutableArray alloc] init];
+    if ([SOHTaskSDK isLogin]) {
+        SOHTaskListViewController * listVC = [SOHTaskSDK taskListViewController];
+        [self.navigationController pushViewController:listVC animated:YES];
+    }else {
+        [SOHTaskSDK login:@"123321" name:@"" delegate:self];
     }
-    [self.objects insertObject:[NSDate date] atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 #pragma mark - Segues
