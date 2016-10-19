@@ -13,7 +13,7 @@
 @property (assign, nonatomic, readonly) BOOL isPlaying;
 
 - (instancetype) initWithName:(NSString *)name;
-
+- (instancetype) initWithMainBundleName:(NSString *)name;
 - (void)play;
 
 - (void)stop;
