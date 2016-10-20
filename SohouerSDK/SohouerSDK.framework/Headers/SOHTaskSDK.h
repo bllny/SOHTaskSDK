@@ -10,15 +10,15 @@
 
 
 #if __has_include(<CocoaLumberjack/CocoaLumberjack.h>)
-#import <CocoaLumberjack/CocoaLumberjack.h>
-#if DEBUG
-static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
+    #import <CocoaLumberjack/CocoaLumberjack.h>
+    #if DEBUG
+        static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
+    #else
+        static const DDLogLevel ddLogLevel = DDLogLevelError;
+    #endif
 #else
-static const DDLogLevel ddLogLevel = DDLogLevelError;
-#endif
-#else
-#define DDLogDebug
-#define DDLogError
+    #define DDLogDebug(...)
+    #define DDLogError(...)
 #endif
 
 #if __has_include(<SohouerSDK/SOHTaskSDK.h>)
